@@ -1,7 +1,6 @@
-import React from "react"; 
+import React from "react";
 import ReactTable from "react-table";  
 import "react-table/react-table.css";
-import List_Comp from "./List_Comp";
 class List extends React.Component{
     constructor(props){
         super(props);
@@ -22,8 +21,9 @@ class List extends React.Component{
                 minWidth:100
             }]
         for (var x = 0; x < 30; x++) {
-            if(this.props.array.includes(x+1)&&this.state.boo==true){c.push({Header: x+1,
-                accessor:`/${parseInt(x+1)}`,
+            if(this.props.array.includes(x+1)&&this.state.boo==true){c.push({
+                Header: x+1,
+                accessor:`${x+1}`,
                 width:'5%',
                 maxWidth:'5%',
                 minWidth:'5%',
@@ -33,29 +33,36 @@ class List extends React.Component{
               });}
             else{
             c.push({Header: x+1,
-                accessor:`/${parseInt(x+1)}`,
+                accessor:`${x+1}`,
                 width:'5%',
                 maxWidth:'5%',
-                minWidth:'5%'});}
+                minWidth:'5%',
+                
+            });}
         }
         const data=[]
+        
         {this.props.tasks.map(i=>{
+        
+            var yo={name:i.name}
+            for(var j=parseInt(i.start,10);j<=parseInt(i.end,10);j++)
+            {
+                yo = Object.assign({}, 
+                    yo, {[`${j}`]:'x'});
+            }
+            
             return (
-                data.push({
-                    name:i.name,
-                    [`${parseInt(i.start, 10)}`]:'x',
-                    [`${parseInt(i.end, 10)}`]:'x'
-                })
+                data.push(yo)
                 );
         })}
-        console.log(this.props.array)
+        console.log(c)
         return (
             <div>
                 <div class="container">
-                    <div class="row">
-                    <div class="col-5"></div>
-                    <div class="col">September 2019 </div>
-                    <div class="col-5"></div>
+                    <div className="row">
+                    <div className="col-5"></div>
+                    <div className="col">September 2019 </div>
+                    <div className="col-5"></div>
                     </div>
                 </div>
                 <ReactTable
@@ -66,9 +73,9 @@ class List extends React.Component{
                   /> 
                 <div>
                 <div class="container">
-                    <div class="row">
-                    <div class="col-5"></div>
-                    <div class="col"><button onClick={this.b1}>show availability</button></div>
+                    <div className="row">
+                    <div className="col-5"></div>
+                    <div className="col"><button className="btn-primary"onClick={this.b1}>show availability</button></div>
                     </div>
                 </div>
                 </div>
