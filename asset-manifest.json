@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/meeting-availability/static/js/main.d053030d.chunk.js",
+    "main.js.map": "/meeting-availability/static/js/main.d053030d.chunk.js.map",
+    "runtime-main.js": "/meeting-availability/static/js/runtime-main.fdc3974a.js",
+    "runtime-main.js.map": "/meeting-availability/static/js/runtime-main.fdc3974a.js.map",
+    "static/css/2.d694ff75.chunk.css": "/meeting-availability/static/css/2.d694ff75.chunk.css",
+    "static/js/2.73b261bc.chunk.js": "/meeting-availability/static/js/2.73b261bc.chunk.js",
+    "static/js/2.73b261bc.chunk.js.map": "/meeting-availability/static/js/2.73b261bc.chunk.js.map",
+    "index.html": "/meeting-availability/index.html",
+    "precache-manifest.8f9f061417c96a74f8b19369bc4ce076.js": "/meeting-availability/precache-manifest.8f9f061417c96a74f8b19369bc4ce076.js",
+    "service-worker.js": "/meeting-availability/service-worker.js",
+    "static/css/2.d694ff75.chunk.css.map": "/meeting-availability/static/css/2.d694ff75.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fdc3974a.js",
+    "static/css/2.d694ff75.chunk.css",
+    "static/js/2.73b261bc.chunk.js",
+    "static/js/main.d053030d.chunk.js"
+  ]
+}
