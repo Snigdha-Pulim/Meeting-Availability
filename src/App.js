@@ -8,7 +8,7 @@ class App extends React.Component {
     this.state = { items: [] };
   }
   componentDidMount() {
-    axios.get('http://localhost:3003/timing')
+    axios.get('http://totalcloud-static.s3.amazonaws.com/intern.json')
     .then(a=>{
       const persons = a.data;
         this.setState({items: persons });
@@ -26,6 +26,7 @@ class App extends React.Component {
         f=k.filter(e => e >parseInt(i.end, 10))
         k=d.concat(f)
       })}
+      console.log(this.state.items)
     return (
       <div>
         <List tasks={this.state.items} array={k}/>

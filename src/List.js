@@ -55,7 +55,6 @@ class List extends React.Component{
                 data.push(yo)
                 );
         })}
-        console.log(c)
         return (
             <div>
                 <div class="container">
