@@ -57,7 +57,12 @@ class List extends React.Component{
         })}
         return (
             <div>
-                
+                <div class="container">
+                    <div className="row">
+                    <div className="col-5"></div>
+                    <div className="col">September 2019 </div>
+                    <div className="col-5"></div>
+                    </div>
                 </div>
                 <ReactTable
                   columns={c}
